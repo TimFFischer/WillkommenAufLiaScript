@@ -9,8 +9,7 @@ language: de
 
 narrator: Deutsch Male
 
-comment:  Try to write a short comment about
-          your course, multiline is also okay.
+comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die Vorteile im Kontext der OER Idee.
 
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
