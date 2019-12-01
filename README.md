@@ -35,7 +35,7 @@ Sie haben die Möglichkeit diesen Kurs entweder in Buchform, als Vorlesung oder 
 
 Für den Fortschritt im Kurs nutzen Sie bitte die Pfeiltasten oben. Die Darstellung links bietet einen Überblick zur Struktur des Kurses.
 
-Die interaktive Version zu diesem Kurs können Sie unter [LiaScript](https://raw.githubusercontent.com/SebastianZug/WillkommenAufLiaScript/master/README.md) starten.
+Die interaktive Version zu diesem Kurs können Sie unter [LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/WillkommenAufLiaScript/master/README.md#1) starten.
 
 Der vollständige "Code" ist unter [GitHub](https://github.com/SebastianZug/WillkommenAufLiaScript/blob/master/README.md) zu finden.
 
