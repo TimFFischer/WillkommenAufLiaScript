@@ -9,6 +9,8 @@ language: de
 
 narrator: Deutsch Male
 
+mode: Presentation
+
 comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die Vorteile im Kontext der OER Idee.
 
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
@@ -106,11 +108,11 @@ Diese Frage muss eindeutig mit nein beantwortet werden. Dafür sprechen im wesen
 die fehlende Möglichkeit interaktive Inhalte zu integrieren und drittens die Notwendigkeit individuelle Zustände zu speichern.
 
 Aus der Sicht der Anforderungen an eine Plattform für dem Wissenstransfer unterliegt das
-Wikipedia-Konzept folgenden Einschränkungen:
+Wikipedia-Konzept zwei zentralen Einschränkungen:
 
-1. Die zentral ausgerichtete Architektur konzentriert alle Inhalte an einer Stelle. Es gibt also nur einen Eintrag für ein bestimmtes Thema. Das Aufsplitten und die Neukombination für individuelle Zwecke ist der Idee folgend nicht vorgesehen. Gleichzeitig erwächst aus dem zentralistischen Konzept die Notwendigkeit einer leistungsfähigen IT-Infrastruktur.
+1. Die zentral ausgerichtete Konzept konzentriert alle Inhalte an einer Stelle. Es gibt also nur einen Eintrag für ein bestimmtes Thema. Das Aufsplitten und die Neukombination für individuelle Zwecke ist der Idee folgend nicht vorgesehen. Gleichzeitig erwächst aus dem zentralistischen Konzept die Notwendigkeit einer leistungsfähigen IT-Infrastruktur.
 
-2. Wikitext erweitert die Beschreibungssprache Markdown, die für die Strukturierung von Texten insbesondere bei der Dokumentation von Softwareprojekten verwendet wird. Dabei entsteht aus den Zeilen:
+2. Wikitext definiert eine Beschreibungssprache [Markdown](https://de.wikipedia.org/wiki/Markdown), die für die Strukturierung von Texten insbesondere bei der Dokumentation von Softwareprojekten verwendet wird. Dabei entsteht aus den Zeilen:
 
 ```
 # Überschrift 1
@@ -129,29 +131,32 @@ Das ist der Text
 <h1> Unterüberschrift 1.A </h1>
 Das auch nur wird diese Wort __fett__ geschrieben
 
-Die Fokussierung auf statische Inhalte genügt aber für die Umsetzung von Lerninhalten,
-die in starkem Maße auf interaktiven Elementen wie Quizzen, Simulationen oder ausführbaren Codefragmenten aufbauen, nicht.
+Die einfache Semantik ist für statische Dokumente von Vorteil aber in Bezug auf Lerninhalte gleichzeitig die größte Einschränkung. Interaktiven Elementen wie Quizze, Simulationen oder ausführbare Codefragmente sind damit nicht umsetzbar.
 
-3. Eine Lehr-Lern-Umgebung muss neben der Vermittlung von Wissen auch die Möglichkeit bieten den aktuellen Lernfortschritt des einzelnen Nutzers zu speichern.
-
-> Die beiden letztgenannten Punkte werden durch etablierte Tools wie Moodle oder Ilias realisiert. Allerdings fehlt in diesem Kontext die Flexibilität bzw. die Versionierung über Systemgrenzen hinweg völlig.
+Etablierte Lernumgebungen Moodle oder Ilias realisieren den letztgenannten Punkt
+über entsprechende Plugins. Allerdings fehlt in diesem Kontext die Flexibilität bzw. die Versionierung über Systemgrenzen hinweg völlig. Ein Austausch von Inhalten erfolgt
+über Kopieroperationen einzelner Textfragmente. Sobald aufwändigere interaktive
+Elemente einbezogen werden ist dies nicht möglich.
 
 ********************************************************************************
 
-## LiaScript
+## LiaScript Konzepte
 
-*LiaScript* zielt entsprechend darauf eine Brücke zwischen diesen beiden Welten zu
-schlagen:
+*LiaScript* zielt entsprechend darauf eine Brücke Lehr-Lern-Umgebungen, Wikipedia und den Methoden der verteilten Softwareentwicklung zu schlagen und kombiniert dafür
+deren Ansätze neu:
 
-1.  die einfache Editierfähigkeit und die Versionierung abgeleitet von Wikipedia.
-2.  die Integration relevanter Formate für interaktive Kurse sowie die Begleitung des Lernfortschrittes.
+| Element                                                        | Bedeutung                                                                                                                |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Gestaltung der Inhalte mittels abstrakter Beschreibungssprache | garantiert die unmittelbare Bearbeitbarkeit ohne spezifische Software. Die Strukturelemente unterstützen den logischen Aufbau des Kurses     |
+| Versionierung der Kurse                                        | die Speicherung  aller Änderungen erlaubt es in der Historie des Dokumentes nachzuvollziehen und beliebig zu kombinieren. Einfache Textdokumente sind hierbei wesentlich einfacher zu handhaben als binäreformate wie docx, pptx oder pdf. |
+| Verteilte Entwicklung der Inhalte                              | anders als in Wikipedia sollten die Lehrenden in der Lage sein, Kurse zu kombinieren und auf eigene Anforderungen hin anzupassen. Entsprechend exisitieren verschiedene Versionen ein und des selben Kurses nebeneinander.                                                                                                                         |
 
-Zudem braucht es einen verteilten Ansatz, um webbasierten Lernmaterialien gemeinsam zu bearbeiten und zu nutzen, ohne dass zunächst ein Server eingerichtet oder ein spezielles Programm für die Editierung beschafft werden muss.
+> Damit zielt *LiaScript* auf die Realisierung einer browserbasierten Lehr-Lern-Umgebung, deren Inhalte mit einer Beschreibungssprache spezifiziert werden können.  Damit sind interaktive Inhalte ohne explizite Programmierkenntnisse möglich, wobei die konkreten Elemente oder aber ganze Kurse als offene Materialien weiterverarbeitet und modifiziert werden können.
 
 {{1}}
 ********************************************************************************
 
-Die Beiträge von *LiaScript* dazu lassen sich wie folgt zusammenfassen:
+Die Beiträge von *LiaScript* auf diesem Weg lassen sich wie folgt zusammenfassen:
 
 1. erweiterte Markdownsyntax, die ein breites Spektrum an interaktiven Elementen umfasst,
 2. Interpreter für die Darstellung der Inhalte im Browser,
@@ -160,17 +165,16 @@ Die Beiträge von *LiaScript* dazu lassen sich wie folgt zusammenfassen:
 5. ein Editor-Tool, das als Open-Source-Werkzeug frei zur Verfügung steht.
 
 --{{1}}--
-LiaScript erweitert den Sprachumfang von Markdown in vielerlei Hinsicht. Dies sind insbesondere die interaktiven Elemente wie ausführbarer Code oder Quizze. Dazu kommen statische Elemente wie die Diagramme oder Grafiken. Auf den folgenden Seiten finden Sie dazu eine Auswahl von Beispielen. Der gesamte Umfang eines LiaScript-Dokumentes wird vom Browser geladen und dann lokal durch den Interpreter dargestellt. Die dafür bereitstehenden Präsentationsformate Vorlesung, Mitschriften und Buch kennen Sie ja bereits. Im Folgenden gehen wir nun auf diese Aspekte des Projektes ein.
+LiaScript erweitert den Sprachumfang von Markdown in vielerlei Hinsicht. Dies sind insbesondere die interaktiven Elemente wie ausführbarer Code oder Quizze. Dazu kommen statische Elemente wie die Diagramme oder Grafiken. Auf den folgenden Seiten finden Sie dazu eine Auswahl von Beispielen. Der gesamte Umfang eines LiaScript-Dokumentes wird vom Browser geladen und dann lokal durch den Interpreter dargestellt. Die dafür bereitstehenden Präsentationsformate Vorlesung, Mitschriften und Buch kennen Sie ja bereits. Im Folgenden gehen wir nun auf Punkte 1, 4 und 5 der Liste der Beiträge ein.
 
 ********************************************************************************
 
-## A) Markdown Erweiterung
+## Markdown Erweiterung
 
 Einen guten Überblick zum "traditionellen" Sprachumfang von Markdown bietet
-die Zusammenstellung auf der Webseite [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Dies betrifft Listen, Tabelle und die Einbindung von
-Bildern.
+die Zusammenstellung auf der Webseite [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Beispielhaft soll hier ein Ausschnitt aus einem Markdown Dokument gezeigt werden, dass die Einbindung von Listen, Tabellen und Bildern zeigt.
 
-```markdown
+```markdown                 MeinMarkdownDokument.md
 1. Lists
 2. ordered or
 
@@ -206,24 +210,25 @@ Images:
 
 ![images](https://farm2.static.flickr.com/1618/26701766821_7bea494826.jpg)
 
-
 ### Medieneinbindung/ Sprachausgabe
 
-Die Sprachausgabe haben Sie ja bereits genutzt. Diese kann mit 32 Sprachen
-umgesetzt werden. Klicken Sie nach rechts um
+Die Sprachausgabe, die *LiaScript* der Ausdrucksmächtigkeit von Markdown hinzufügt, haben Sie ja bereits genutzt. Diese kann mit 32 Sprachen
+umgesetzt werden. Klicken Sie nach rechts ...
 
 {{1}}
 ********************************************************************************
-... eine englische Textausgabe zu hören. Deren Ausgaben basieren wiederum nur auf dem im Dokument festgehaltenen Text. Für den gerade
+... um eine englische Textausgabe zu hören. Deren Ausgaben basieren wiederum nur auf dem im Dokument festgehaltenen Text. Für den gerade
 gehörten englischen Text steht im Kursdokument einfach nur der Eintrag:
 
 ```
 --{{1 US English Female}}--
-But you can also include other features such as spoken text.
+But you can also include other languages in spoken text. English, French, Russian, etc. are no problem.
 ```
 
 --{{1 US English Female}}--
-But you can also include other features such as spoken text.
+But you can also include other languages in spoken text. English, French, Russian, etc. are no problem.
+
+Diese deutet perspektivische auf die Multilingualität von *LiaScript* hin. Ganze Kurse, einzelne Erläuterungen können übersetzt und international verwendet werden. Die Sprache der Ausführungsumgebung lässt sich übrigens im Header eines Dokumentes konfigurieren. Dann erscheinen auch die Elemente in der Hilfe und den Verweisen in der jeweiligen Sprache.
 
 ********************************************************************************
 
@@ -283,13 +288,13 @@ keine weiteren Werkzeuge notwendig, deren Inhalt mit jeder Iteration angepasst w
 
 ### Quizzes
 
-### A Textquiz
+**Textquizze**
 
 What did the **fish** say when he hit a **concrete wall**?
 
     [[dam]]
 
-### Multiple Choice
+*Multiple Choice*
 
 Just add as many points as you wish:
 
@@ -297,7 +302,7 @@ Just add as many points as you wish:
     [[ ]] Empty ones are wrong.
     [[X]] ...
 
-### Single Choice
+**Single Choice**
 
 Just add as many points as you wish:
 
@@ -327,9 +332,11 @@ new Chartist.Bar('#chart2', {
 <div class="ct-chart ct-golden-section" id="chart1"></div>
 <div class="ct-chart ct-golden-section" id="chart2"></div>
 
-## C) Verteiltes Versionmanagment
+## Verteiltes Versionmanagment
 
 Link auf diesen Kurs
 
 
-## D) Editor
+## Editor
+
+## Ausblick
