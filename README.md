@@ -15,7 +15,7 @@ comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die Vorte
 
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
-
+import: https://raw.githubusercontent.com/LiaTemplates/Rextester/master/README.md
 translation: Deutsch  translations/German.md
 -->
 
@@ -75,7 +75,7 @@ Version 1.0                           Version 1.1
                                .-->   |         Angelika Maier    |----->
                                       |~~~~~~~~~~~~~~~~~~~~~~~~~~~|
                                       | Während der italienischen |
-                                      |                           |
+                                      | Reise ...                 |
 ```
 *Versionen der Lehrinhalte eines Kurses und deren Wiederverwendung in anderen Veranstaltungen*
 
@@ -89,7 +89,7 @@ Wie sollten Lehrmaterialien entstehen, die den Stempel O E R wirklich verdienen?
 Warum gelingt es Wikipedia dieses Konzept mit Millionen aktiver Freiwilliger erfolgreich umzusetzen.
 
 --{{1}}--
-Der Eintrag "Bundesrepublik Deutschland" blickte im Mai 2019 auf 15850 Änderungen von 3928 Nutzern zurück. Wikipedia sichert durch diese Anpassung die Aktualität und Qualität des Bestandes an Daten. Wo aber liegt der Schlüssel zum Erfolg?
+Der Eintrag "Bundesrepublik Deutschland" blickte im Mai 2019 auf 15850 Änderungen zurück. Dazu haben 3928 Nutzer beigetragen. Wikipedia sichert so die Aktualität und Qualität des Bestandes an Daten. Wo aber liegt der Schlüssel zum Erfolg?
 
 | Gründe für den Erfolg von Wikipedia | Erläuterung                                                                                                                                                                                                                                                      |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -104,8 +104,9 @@ Der Eintrag "Bundesrepublik Deutschland" blickte im Mai 2019 auf 15850 Änderung
 Kann man also einfach ein Wikipedia für Lehrveranstaltungsinhalte ableiten?
 
 --{{2}}--
+Kann man also einfach ein Wikipedia für Lehrveranstaltungsinhalte ableiten?
 Diese Frage muss eindeutig mit nein beantwortet werden. Dafür sprechen im wesentlichen drei Gründe: erstens, die zentral aufgebaute Architektur von Wikipedia, zweitens
-die fehlende Möglichkeit interaktive Inhalte zu integrieren und drittens die Notwendigkeit individuelle Zustände zu speichern.
+die fehlende Möglichkeit interaktive Inhalte zu integrieren. Und drittens die eingeschränkten Möglichkeiten individuelle Zustände zu speichern.
 
 Aus der Sicht der Anforderungen an eine Plattform für dem Wissenstransfer unterliegt das
 Wikipedia-Konzept zwei zentralen Einschränkungen:
@@ -114,22 +115,26 @@ Wikipedia-Konzept zwei zentralen Einschränkungen:
 
 2. Wikitext definiert eine Beschreibungssprache [Markdown](https://de.wikipedia.org/wiki/Markdown), die für die Strukturierung von Texten insbesondere bei der Dokumentation von Softwareprojekten verwendet wird. Dabei entsteht aus den Zeilen:
 
-```
-# Überschrift 1
-Das ist der Text
+<table border="1" width="100%" >
+<tr>
+  <th>Markdown Dokument</th>
+  <th>Ergebnis nach dem Rendering</th>
+</tr>
+  <tr>
+    <td width="50%"><pre><code>
+ # Überschrift 1
+ Das ist der Text
 
-## Unterüberschrift 1.A
-Das auch nur wird diese Wort __fett__ geschrieben
-```
+ ## Unterüberschrift 1.A
+ Das auch nur wird diese Wort __fett__ geschrieben</code></pre> </td>
+    <td width="50%"><h2> Überschrift 1 </h2>
+    Das ist der Text
 
-die Ausgabe
-
--------------------------------------------------------------------------------
-<h2> Überschrift 1 </h2>
-Das ist der Text
-
-<h1> Unterüberschrift 1.A </h1>
-Das auch nur wird diese Wort __fett__ geschrieben
+    <h1> Unterüberschrift 1.A </h1>
+    Das auch nur wird diese Wort __fett__ geschrieben
+    </td>
+  </tr>
+</table>
 
 Die einfache Semantik ist für statische Dokumente von Vorteil aber in Bezug auf Lerninhalte gleichzeitig die größte Einschränkung. Interaktiven Elementen wie Quizze, Simulationen oder ausführbare Codefragmente sind damit nicht umsetzbar.
 
@@ -161,15 +166,17 @@ Die Beiträge von *LiaScript* auf diesem Weg lassen sich wie folgt zusammenfasse
 1. erweiterte Markdownsyntax, die ein breites Spektrum an interaktiven Elementen umfasst,
 2. Interpreter für die Darstellung der Inhalte im Browser,
 3. Bereitstellung unterschiedlicher Präsentationsformate, die den Kurs Nutzergetrieben aufbereiten,
-4. verteiltes Versionmanagment auf der Basis der Tools, die für Open Source Projekte zum Einsatz kommen und
-5. ein Editor-Tool, das als Open-Source-Werkzeug frei zur Verfügung steht.
+4. verteiltes Versionmanagment auf der Basis der Tools, die für Open-Source Projekte zum Einsatz kommen und
+5. ein Editor-Tool, das als Open-Source Werkzeug frei zur Verfügung steht.
 
---{{1}}--
-LiaScript erweitert den Sprachumfang von Markdown in vielerlei Hinsicht. Dies sind insbesondere die interaktiven Elemente wie ausführbarer Code oder Quizze. Dazu kommen statische Elemente wie die Diagramme oder Grafiken. Auf den folgenden Seiten finden Sie dazu eine Auswahl von Beispielen. Der gesamte Umfang eines LiaScript-Dokumentes wird vom Browser geladen und dann lokal durch den Interpreter dargestellt. Die dafür bereitstehenden Präsentationsformate Vorlesung, Mitschriften und Buch kennen Sie ja bereits. Im Folgenden gehen wir nun auf Punkte 1, 4 und 5 der Liste der Beiträge ein.
+Der gesamte Umfang eines LiaScript-Dokumentes wird vom Browser geladen. Danach erfolgt die Darstellung durch den Interpreter. Die dafür bereitstehenden Präsentationsformate Vorlesung, Mitschriften und Buch kennen Sie ja bereits.
 
 ********************************************************************************
 
 ## Markdown Erweiterung
+
+--{{0}}--
+LiaScript erweitert den Sprachumfang von Markdown in vielerlei Hinsicht. Dies sind insbesondere die interaktiven Elemente wie ausführbarer Code oder Quizze. Dazu kommen statische Elemente wie Diagramme. Auf den folgenden Seiten finden Sie dazu eine Auswahl von Beispielen. Werfen wir aber zunächst einen Blick auf die generelle Idee von Markdown. Im oberen Teil der aktuellen Seite sehen Sie die Inhaltsbeschreibung, im unteren das Ergebnis nach dem Rendering.
 
 Einen guten Überblick zum "traditionellen" Sprachumfang von Markdown bietet
 die Zusammenstellung auf der Webseite [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Beispielhaft soll hier ein Ausschnitt aus einem Markdown Dokument gezeigt werden, dass die Einbindung von Listen, Tabellen und Bildern zeigt.
@@ -228,7 +235,7 @@ But you can also include other languages in spoken text. English, French, Russia
 --{{1 US English Female}}--
 But you can also include other languages in spoken text. English, French, Russian, etc. are no problem.
 
-Diese deutet perspektivische auf die Multilingualität von *LiaScript* hin. Ganze Kurse, einzelne Erläuterungen können übersetzt und international verwendet werden. Die Sprache der Ausführungsumgebung lässt sich übrigens im Header eines Dokumentes konfigurieren. Dann erscheinen auch die Elemente in der Hilfe und den Verweisen in der jeweiligen Sprache.
+Die perspektivische Multilingualität von *LiaScript* betrifft verschiedene Elemente. Ganze Kurse, einzelne Erläuterungen können übersetzt und international verwendet werden. Die Sprache der Ausführungsumgebung lässt sich übrigens im Header eines Dokumentes konfigurieren. Dann erscheinen auch die Elemente in der Hilfe und den Verweisen in der jeweiligen Sprache.
 
 ********************************************************************************
 
@@ -286,15 +293,43 @@ keine weiteren Werkzeuge notwendig, deren Inhalt mit jeder Iteration angepasst w
      -1 +------------------------------------
         0              x-axis               1
 
+
 ### Quizzes
 
-**Textquizze**
+*LiaScript* integriert 12 verschiedene Formen von Quizzen, die in die Lehrinhalte
+integriert werden können.
+
+--{{0}}--
+Die Beispiele für Quizze zeigen jeweils im oberen Bereich den LiaScript Code, im unteren die Darstellung im Browser. Die übergreifende Syntax erlaubt sowohl die Spezifikation des Formates, der Lösungen, aber auch Hilfen für den Lernenden.
+
+{{0-1}}
+********************************************************************************
+**a) Text Quiz**
+
+```
+What did the **fish** say when he hit a **concrete wall**?
+
+    [[dam]]
+```
 
 What did the **fish** say when he hit a **concrete wall**?
 
     [[dam]]
 
-*Multiple Choice*
+********************************************************************************
+
+{{1-2}}
+********************************************************************************
+
+**b) Multiple Choice**
+
+```
+Just add as many points as you wish:
+
+    [[X]] Only the **X** marks the correct point.
+    [[ ]] Empty ones are wrong.
+    [[X]] ...
+```
 
 Just add as many points as you wish:
 
@@ -302,7 +337,19 @@ Just add as many points as you wish:
     [[ ]] Empty ones are wrong.
     [[X]] ...
 
-**Single Choice**
+********************************************************************************
+
+{{2-3}}
+********************************************************************************
+**c) Single Choice**
+
+```
+Just add as many points as you wish:
+
+    [( )] ...
+    [(X)] <-- Only the **X** is allowed.
+    [( )] ...
+```
 
 Just add as many points as you wish:
 
@@ -310,9 +357,12 @@ Just add as many points as you wish:
     [(X)] <-- Only the **X** is allowed.
     [( )] ...
 
+********************************************************************************
+
 ### Ausführbarer Code
 
-A drawing example, for demonstrating that any JavaScript library can be used, also for drawing.
+Ein Beispiel für ausführbaren Code ist dieses JavaScript Fragment. Dieser Code
+wird nativ im Browser ausgeführt und generiert eine entsprechende AUsgabe
 
 ```javascript
 // Initialize a Line chart in the container with the ID chart1
@@ -320,23 +370,45 @@ new Chartist.Line('#chart1', {
   labels: [1, 2, 3, 4],
   series: [[100, 120, 180, 200]]
 });
-
-// Initialize a Line chart in the container with the ID chart2
-new Chartist.Bar('#chart2', {
-  labels: [1, 2, 3, 4],
-  series: [[5, 2, 8, 3]]
-});
 ```
 <script>@input</script>
 
 <div class="ct-chart ct-golden-section" id="chart1"></div>
-<div class="ct-chart ct-golden-section" id="chart2"></div>
+
+Alternativ können Sie aber eine von 32 Programmiersprachen integrieren, die
+über einen Webservice eingebunden werden. Der Vorteil liegt hier darin, dass Sie
+ohne aufwändige Installationen von Compilern und Editoren praktisch am Code arbeiten können.
+Das nachfolgende Fragment zeigt ein Beispiel aus einer [Informatik-Vorlesung](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/SoftwareprojektRobotik/master/00_Einfuehrung.md#1), die in LiaScript erstellt wurde.
+
+```cpp                     structExample.cpp
+#include <iostream>
+
+struct Student{
+  std::string name;
+  int matrikel;
+  void printCertificate(std::string topic);
+};
+
+void Student::printCertificate(std::string topic){
+  std::cout << name << " passed " << topic;
+}
+
+int main()
+{
+  Student Humboldt {"Alexander Humboldt", 1798};
+  Humboldt.printCertificate("Softwareentwicklung");
+  return 0;
+}
+```
+@Rextester.CPP
 
 ## Verteiltes Versionmanagment
 
-Link auf diesen Kurs
+--{{0}}--
+Wie ist nun aber die verteilte Entwicklung dieses Kurses realisiert? Der Kurs selbst
+wird auf einer Plattform für Open-Source Projekte gehostet. Github umfasst Millionen von Implementierungen und stellt unter anderem die Werkzeuge für die Versionierung bereit.
+
+<iframe src="https://github.com/SebastianZug/WillkommenAufLiaScript/commits/master" height="100" width="200" name="meiniframe">Alternativtext</iframe>
 
 
 ## Editor
-
-## Ausblick
