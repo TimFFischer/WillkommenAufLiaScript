@@ -18,7 +18,9 @@ link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
+
 import: https://raw.githubusercontent.com/LiaTemplates/Rextester/master/README.md
+        https://raw.githubusercontent.com/liaTemplates/processingjs/master/README.md
 
 translation: Deutsch  translations/German.md
 
@@ -31,7 +33,7 @@ Hallo, wenn Sie sich für *Open Educational Ressources* interessieren, sind Sie
 hier genau richtig. Wir wollen Ihnen ein neues Konzept für das "O" in O E R
 vorstellen, dass deutlich weitergeht als Dokumente, die auf einem Server online
 gestellt werden. Unser Projekt heißt "LiaScript" und erlaubt es Lehrinhalte wie
-ein Open Source Projekt zu realisieren. Interessiert? Dann klicken Sie auf den
+ein Open Source Projekt umzusetzen. Interessiert? Dann klicken Sie auf den
 Pfeil nach rechts.
 
 Wie Sie sich sicher schon denken können, entstand dieser Kurs auch auf der Basis
@@ -55,6 +57,8 @@ oben rechts. Das
 Für den Fortschritt im Kurs nutzen Sie bitte die Pfeiltasten oben. Die
 Darstellung links bietet einen Überblick zur Struktur des Kurses.
 
+--------------------------------------------------------------------------------
+
 Die interaktive Version zu diesem Kurs können Sie unter
 [LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/WillkommenAufLiaScript/master/README.md#1)
 starten.
@@ -65,6 +69,7 @@ zu finden.
 
 ![Logo](./images/logo.png)<!-- width="20%" -->
 
+--------------------------------------------------------------------------------
 
 ## Motivation
 
@@ -210,9 +215,11 @@ implementiert sind, ist dies nicht möglich.
 
 ## LiaScript Konzepte
 
-*LiaScript* zielt entsprechend darauf eine Brücke Lehr-Lern-Umgebungen,
-Wikipedia und den Methoden der verteilten Softwareentwicklung zu schlagen und
-kombiniert dafür deren Ansätze neu:
+--{{0}}--
+Folglich möchte *LiaScript* eine Brücke zwischen den Lehr-Lern-Umgebungen,
+dem Wikipedia Ansatz und den Methoden der verteilten Softwareentwicklung schlagen.
+Dafür definiert das Projekt deren Ansätze in folgenden Punkten neu und kombiniert
+sie:
 
 | Element                                                        | Bedeutung                                                                                                                                                                                                                                  |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -220,7 +227,7 @@ kombiniert dafür deren Ansätze neu:
 | Versionierung der Kurse                                        | die Speicherung  aller Änderungen erlaubt es in der Historie des Dokumentes nachzuvollziehen und beliebig zu kombinieren. Einfache Textdokumente sind hierbei wesentlich einfacher zu handhaben als binäreformate wie docx, pptx oder pdf. |
 | Verteilte Entwicklung der Inhalte                              | anders als in Wikipedia sollten die Lehrenden in der Lage sein, Kurse zu kombinieren und auf eigene Anforderungen hin anzupassen. Entsprechend exisitieren verschiedene Versionen ein und des selben Kurses nebeneinander.                 |
 
-> Damit zielt *LiaScript* auf die Realisierung einer browserbasierten Lehr-Lern-Umgebung, deren Inhalte mit einer Beschreibungssprache spezifiziert werden können.  Damit sind interaktive Inhalte ohne explizite Programmierkenntnisse möglich, wobei die konkreten Elemente oder aber ganze Kurse als offene Materialien weiterverarbeitet und modifiziert werden können.
+> Damit zielt *LiaScript* auf die Realisierung einer browserbasierten Kursdarstellung, deren Inhalte mit einer Beschreibungssprache spezifiziert werden können. Damit sind interaktive Inhalte ohne explizite Programmierkenntnisse möglich, wobei die konkreten Elemente oder aber ganze Kurse als offene Materialien weiterverarbeitet und modifiziert werden können.
 
      {{1}}
 ********************************************************************************
@@ -401,6 +408,24 @@ müsste.
         0              x-axis               1
 
 
+{{1}}
+********************************************************************************
+
+Daneben können aber auch JavaScript basierte Diagramme unmittelbar im LiaScript-Dokument eingebettet werden. Dieses Codefragment generiert ein xy Diagramm. Die Parameter können zur Präsentationszeit angepasst werden.
+
+```javascript
+// Initialize a Line chart in the container with the ID chart1
+new Chartist.Line('#chart1', {
+  labels: [1, 2, 3, 4],
+  series: [[100, 120, 180, 200]]
+});
+```
+<script>@input</script>
+
+<div class="ct-chart ct-golden-section" id="chart1"></div>
+
+********************************************************************************
+
 ### Quizzes
 
 *LiaScript* integriert 12 verschiedene Formen von Quizzen, die in die
@@ -434,40 +459,24 @@ What did the **fish** say when he hit a **concrete wall**?
 
 **b) Multiple Choice**
 
-``` markdown
-Just add as many points as you wish:
+Die Kreuze markieren sehr intuitiv die korrekten Lösungen beim Mulitple Choice Test.
+In diesem Beispiel wird illustriert, wie zusätzliche Hilfen für den Lernenden
+Integriert werden können. Neben dem "i" für die Lösung taucht nun auch ein Fragezeichen auf.
 
-    [[X]] Only the **X** marks the correct point.
-    [[ ]] Empty ones are wrong.
-    [[X]] ...
+``` markdown
+Please mark even numbers!
+
+    [[X]] 1
+    [[ ]] 2
+    [[X]] 3
 ```
 
 Just add as many points as you wish:
 
-    [[X]] Only the **X** marks the correct point.
-    [[ ]] Empty ones are wrong.
-    [[X]] ...
-
-********************************************************************************
-
-    {{2-3}}
-********************************************************************************
-
-**c) Single Choice**
-
-``` markdown
-Just add as many points as you wish:
-
-    [( )] ...
-    [(X)] <-- Only the **X** is allowed.
-    [( )] ...
-```
-
-Just add as many points as you wish:
-
-    [( )] ...
-    [(X)] <-- Only the **X** is allowed.
-    [( )] ...
+    [[X]] 1
+    [[ ]] 2
+    [[X]] 3
+    [[?]] What is the characteristic of an even number?
 
 Weitere Beispiele für Quizze finden Sie unter dem [Link](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md)
 
@@ -475,19 +484,30 @@ Weitere Beispiele für Quizze finden Sie unter dem [Link](https://liascript.gith
 
 ### Ausführbarer Code
 
-Ein Beispiel für ausführbaren Code ist dieses JavaScript Fragment. Dieser Code
-wird nativ im Browser ausgeführt und generiert eine entsprechende AUsgabe
+--{{0}}--
+Ausführbarer Code ist insbesondere für die Ausbildung in der Informatik von
+zentraler Bedeutung. Dabei muss die Intention des Kurses aber auch gar nicht
+auf die Vermittlung von Programmierkenntnissen ausgerichtet sein. Mit dem browserinternen
+Interpreter können alle Arten von Tools, die ein JavaScript Interface bieten, integriert werden. Klicken Sie auf den Button unter den Codefragmenten, um diese auszuführen.
 
-```javascript
-// Initialize a Line chart in the container with the ID chart1
-new Chartist.Line('#chart1', {
-  labels: [1, 2, 3, 4],
-  series: [[100, 120, 180, 200]]
-});
+In diesem Beispiel wurde eine die Processing Toolchain, die als JavaScript-Implementierung vorliegt, in LiaScript integriert. Über ein `include` über dem zugehörigen Makro kann dies eingebettet werden.
+
+```cpp                         Processing.js
+void setup() {
+  size(480, 220);
+}
+
+void draw() {
+  if (mousePressed) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  ellipse(mouseX, mouseY, 80, 80);
+}
 ```
-<script>@input</script>
+@Processing.eval
 
-<div class="ct-chart ct-golden-section" id="chart1"></div>
 
 Alternativ können Sie aber eine von 32 Programmiersprachen integrieren, die über
 einen Webservice eingebunden werden. Der Vorteil liegt hier darin, dass Sie ohne
@@ -521,46 +541,62 @@ int main()
 ## Verteiltes Versionmanagment
 
     --{{0}}--
-Wie ist nun aber die verteilte Entwicklung dieses Kurses realisiert? Der Kurs
-selbst wird auf einer Plattform für Open-Source Projekte gehostet. Github
-umfasst Millionen von Implementierungen und stellt unter anderem die Werkzeuge
-für die Versionierung bereit.
+Wie ist nun aber die verteilte Entwicklung eines LiaScript-Kurses realisiert?
+Die vorliegende "Vorlesung" selbst wird auf Github, einer Plattform für
+die Softwareentwicklung gehostet. Dort finden sich Millionen von Open-Source Projekten, nun auch der Code für dieses Dokument.
 
-<iframe src="https://github.com/SebastianZug/WillkommenAufLiaScript/commits/master"></iframe> 
+Sie können das *LiaScript* Dokument, dass hinter diesem Kurs steht unter folgendem
+[Link](https://github.com/SebastianZug/WillkommenAufLiaScript) finden. GitHub unterstützt
+aber nur das konventionelle Markdown, so dass einige Elemente in der Vorschau nicht korrekt angezeigt werden.
 
-![Logo](./images/logo.png)<!-- width="20%" -->
+Der folgende Screenshot zeigt die Übersicht über die Versionen seit dem 1. Dezember. Anhand dieser Übersicht können die Beitragenden und deren Änderungen individuell nachvollzogen werden.
 
+![GitHub](./images/ScreenshotGitHub.png)<!-- width="80%" -->
+*Übersicht über den Stand der Versionen am 3.12.2019*
+
+Ein öffentliches Git-Projekt kann sehr einfach kopiert und weiterentwickelt werden. Dabei unterstützen entsprechende Tools das Verschmelzen von unterschiedlichen Versionen und Entwicklungssträngen.
 
 ## Editor
 
-There are currently 2 Plugins for the [Atom Editor](https://atom.io/) available,
-which are intended to ease and simplify the development of online course with
-LiaScript.
+    --{{0}}--
+LiaScript Dokumente könnnen mit jedem Texteditor bearbeitet werden. Um den
+LiaScript-Nutzer aber bei der effektiven Arbeit zu unterstützen, wurde ein
+Open-Source Editor angepasst. Atom ist ein freies Editierwerkzeug für Texte und Code,
+dass für Windows, Linux und Mac OS bereitsteht.
 
-[liascript-preview](https://atom.io/packages/liascript-preview): Is a tiny
-previewer that, if it was toggled, updates the view on your course each time you
-save your document.
+Gegenwärtig bestehen zwei Plugins für den [Atom Editor](https://atom.io/), die
+die Entwicklung von Lerninhalten mit einer Vorschau und Codesnippets unterstützen.
 
+[liascript-preview](https://atom.io/packages/liascript-preview): Der Previewer
+gibt dem Nutzer ein sofortiges Feedback für seine Arbeit. Während im linken
+Fenster LiaScript Code eingegeben wird erscheint die Ausgabe sofort auf der
+rechten Seite.
 
 ![previewer](https://raw.githubusercontent.com/andre-dietrich/liascript-preview/master/preview.gif)<!-- style="width: 100%" -->
 
-[liascript-snippets](https://atom.io/packages/liascript-snippets): If you start
-typing "lia" in your document you switch on a fuzzy search, that contains a lot
-of LiaScript help, examples, and snippets.
+[liascript-snippets](https://atom.io/packages/liascript-snippets): Um bestimmte
+LiaScript-Konstrukte rasch bei der Hand zu haben, integriert dieses Plugin
+kleine Fragmente und Beispiele. Der Nutzer gibt lediglich ein Kürzel des
+intendierten Inhaltes ein, also zum Beispiel `liaQuiz` und bekommt ein
+Auswahlmenü aller möglichen Formate angezeigt.
 
 ![snippets](https://raw.githubusercontent.com/andre-dietrich/liascript-snippets/master/preview.gif)<!-- style="width: 100%" -->
 
+## Integration
 
-
-
-## Ausblick
-
-Die Integration
+Seit dem Wintersemester 2017/18 wird LiaScript Vorlesungen der Informatik an der Otto-von-Guericke Universität und der TU Bergakademie Freiberg eingesetzt. Für die nahtlose Integration in den Lehrbetrieb sorgt dabei die Einbettung der jeweiligen Materialien in die Lehr-Lern-Umgebungen, die an den Hochschulen eingesetzt werden.
 
 ![Logo](./images/Screenshot.png)<!-- width="80%" -->
+*Integration der LiaScript-basierten Vorlesung "Softwareprojekt" in das OPAL System*
+
+## Kontakt
 
 Haben wir Sie neugierig gemacht? Weitere Informationen finden Sie unter der Projektwebseite
 
 https://liascript.github.io/
 
 ![Logo](./images/logo.png)<!-- width="20%" -->
+
+
+| Dr. Andrè Dietrich | andre.dietrich@ovgu.de |
+| Prof. Dr. Sebastian Zug | sebastian.zug@informatik.tu-freiberg.de |
