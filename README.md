@@ -55,15 +55,9 @@ oben rechts. Das
 Für den Fortschritt im Kurs nutzen Sie bitte die Pfeiltasten oben. Die
 Darstellung links bietet einen Überblick zur Struktur des Kurses.
 
-<<<<<<< HEAD
---------------------------------------------------------------------------
-
-Die interaktive Version zu diesem Kurs können Sie unter [LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/WillkommenAufLiaScript/master/README.md#1) starten.
-=======
 Die interaktive Version zu diesem Kurs können Sie unter
 [LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/WillkommenAufLiaScript/master/README.md#1)
 starten.
->>>>>>> f679bbdb2b2a260f5107aa91edd87d00902bc0ad
 
 Der vollständige "Code" ist unter
 [GitHub](https://github.com/SebastianZug/WillkommenAufLiaScript/blob/master/README.md)
@@ -169,38 +163,48 @@ unterliegt das Wikipedia-Konzept zwei zentralen Einschränkungen:
 2. Wikitext definiert eine Beschreibungssprache
    [Markdown](https://de.wikipedia.org/wiki/Markdown), die für die
    Strukturierung von Texten insbesondere bei der Dokumentation von
-   Softwareprojekten verwendet wird. Dabei entsteht aus den Zeilen:
+   Softwareprojekten verwendet wird. Die Markdown-Dokumente werden dabei durch
+   Interpreter in html Darstellungen überführt, ohne das der Anwender deren
+   deutlich abstraktere Semantik kennen muss. Die nachfolgende Tabelle zeigt
+   das nebeneinander der Darstellung
 
-<table border="1" width="100%" >
-<tr>
-  <th>Markdown Dokument</th>
-  <th>Ergebnis nach dem Rendering</th>
-</tr>
-  <tr>
-    <td width="50%"><pre><code>
+   Die einfache Semantik ist für statische Dokumente von Vorteil aber in Bezug auf
+   Lerninhalte gleichzeitig die größte Einschränkung. Interaktiven Elementen wie
+   Quizze, Simulationen oder ausführbare Codefragmente sind damit nicht umsetzbar.
+
+<table class="lia-inline lia-table">
+    <thead class="lia-inline lia-table-head">
+        <tr>
+          <th>Markdown Inhalt</th>
+          <th>Ausgabe</th>
+        </tr>
+    </thead>
+        <tr class="lia-inline lia-table-row">
+          <td>
+          <code><pre 	style = "Lucida Console; font-size: 14px;font-style: normal; ">
  # Überschrift 1
  Das ist der Text
 
  ## Unterüberschrift 1.A
- Das auch nur wird diese Wort __fett__ geschrieben</code></pre> </td>
-    <td width="50%"><h2> Überschrift 1 </h2>
-    Das ist der Text
+ Das auch, nur wird dieses Wort __fett__ geschrieben
+          </pre></code></td>
+          <td>
+          <h2> Überschrift 1 </h2>
+          Das ist der Text
 
-    <h1> Unterüberschrift 1.A </h1>
-    Das auch nur wird diese Wort __fett__ geschrieben
-    </td>
-  </tr>
+          <h1> Unterüberschrift 1.A </h1>
+          Das auch nur, wird dieses Wort <b>fett</b>  geschrieben
+          </td>
+        </tr>
 </table>
 
-Die einfache Semantik ist für statische Dokumente von Vorteil aber in Bezug auf
-Lerninhalte gleichzeitig die größte Einschränkung. Interaktiven Elementen wie
-Quizze, Simulationen oder ausführbare Codefragmente sind damit nicht umsetzbar.
-
-Etablierte Lernumgebungen Moodle oder Ilias realisieren den letztgenannten Punkt
-über entsprechende Plugins. Allerdings fehlt in diesem Kontext die Flexibilität
+Im Unterschied dazu definieren etablierte Lernumgebungen Moodle oder Ilias
+die notwendige Infrastruktur, um den notwendigen Lernfortschritt individuell
+zu begleiteten. Allerdings fehlt diesen Lehr-Lern-Umgebungen die Flexibilität
 bzw. die Versionierung über Systemgrenzen hinweg völlig. Ein Austausch von
 Inhalten erfolgt über Kopieroperationen einzelner Textfragmente. Sobald
-aufwändigere interaktive Elemente einbezogen werden ist dies nicht möglich.
+aufwändigere interaktive Elemente einbezogen werden, die systemspezfisch
+implementiert sind, ist dies nicht möglich.
 
 ********************************************************************************
 
@@ -256,40 +260,57 @@ Beispielhaft soll hier ein Ausschnitt aus einem Markdown Dokument gezeigt
 werden, dass die Einbindung von Listen, Tabellen und Bildern zeigt.
 
 ```markdown                 MeinMarkdownDokument.md
-1. Lists
-2. ordered or
+Markdown ist die Basis von *Liascript*. Allerdings genügen die in dieser
+Beschreibungssprache integrierten Features den Anforderungen eines interaktiven
+Lerninhaltes nicht. Von Haus aus unterstützt Markdown zum Beispiel:
 
-   * unordered
-   * ones ...
+**Listen**
 
+1. in
+2. geordnet oder
+
+   * ungeordnet
+   * auch in geschachtelter Struktur
+
+**Tabellen**
 
 | Header 1   | Header 2   |
 | :--------- | :--------- |
 | Item 1     | Item 2     |
 
 
-Images:
+**Images**
 
-![images](https://farm2.static.flickr.com/1618/26701766821_7bea494826.jpg)
+![images](https://farm2.static.flickr.com/1618/26701766821_7bea494826.jpg)<!-- width="30%" -->
 ```
 
 Daraus entsteht folgende Darstellung:
 
-1. Lists
-2. ordered or
+-------------------------------------------------------------------------------
+Markdown ist die Basis von *Liascript*. Allerdings genügen die in dieser
+Beschreibungssprache integrierten Features den Anforderungen eines interaktiven
+Lerninhaltes nicht. Von Haus aus unterstützt Markdown zum Beispiel:
 
-   * unordered
-   * ones ...
+**Listen**
 
+1. in
+2. geordnet oder
+
+   * ungeordnet
+   * auch in geschachtelter Struktur
+
+**Tabellen**
 
 | Header 1   | Header 2   |
 | :--------- | :--------- |
 | Item 1     | Item 2     |
 
 
-Images:
+**Images**
 
-![images](https://farm2.static.flickr.com/1618/26701766821_7bea494826.jpg)
+![images](https://farm2.static.flickr.com/1618/26701766821_7bea494826.jpg)<!-- width="30%" -->
+
+-------------------------------------------------------------------------------
 
 ### Medieneinbindung/ Sprachausgabe
 
@@ -505,6 +526,7 @@ selbst wird auf einer Plattform für Open-Source Projekte gehostet. Github
 umfasst Millionen von Implementierungen und stellt unter anderem die Werkzeuge
 für die Versionierung bereit.
 
+<iframe src="https://github.com/SebastianZug/WillkommenAufLiaScript/commits/master"></iframe> 
 
 ![Logo](./images/logo.png)<!-- width="20%" -->
 
