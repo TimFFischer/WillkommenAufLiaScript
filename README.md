@@ -36,9 +36,14 @@ Sie haben die Möglichkeit diesen Kurs entweder in Buchform, als Vorlesung oder 
 
 Für den Fortschritt im Kurs nutzen Sie bitte die Pfeiltasten oben. Die Darstellung links bietet einen Überblick zur Struktur des Kurses.
 
+--------------------------------------------------------------------------
+
 Die interaktive Version zu diesem Kurs können Sie unter [LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/WillkommenAufLiaScript/master/README.md#1) starten.
 
 Der vollständige "Code" ist unter [GitHub](https://github.com/SebastianZug/WillkommenAufLiaScript/blob/master/README.md) zu finden.
+
+![Logo](./images/logo.png)<!-- width="20%" -->
+
 
 ## Motivation
 
@@ -357,6 +362,8 @@ Just add as many points as you wish:
     [(X)] <-- Only the **X** is allowed.
     [( )] ...
 
+Weitere Beispiele für Quizze finden Sie unter dem [Link](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md)
+
 ********************************************************************************
 
 ### Ausführbarer Code
@@ -408,7 +415,40 @@ int main()
 Wie ist nun aber die verteilte Entwicklung dieses Kurses realisiert? Der Kurs selbst
 wird auf einer Plattform für Open-Source Projekte gehostet. Github umfasst Millionen von Implementierungen und stellt unter anderem die Werkzeuge für die Versionierung bereit.
 
-<iframe src="https://github.com/SebastianZug/WillkommenAufLiaScript/commits/master" height="100" width="200" name="meiniframe">Alternativtext</iframe>
+
+![Logo](./images/logo.png)<!-- width="20%" -->
 
 
 ## Editor
+
+There are currently 2 Plugins for the [Atom Editor](https://atom.io/) available,
+which are intended to ease and simplify the development of online course with
+LiaScript.
+
+[liascript-preview](https://atom.io/packages/liascript-preview): Is a tiny
+previewer that, if it was toggled, updates the view on your course each time you
+save your document.
+
+
+![previewer](https://raw.githubusercontent.com/andre-dietrich/liascript-preview/master/preview.gif)<!-- style="width: 100%" -->
+
+[liascript-snippets](https://atom.io/packages/liascript-snippets): If you start
+typing "lia" in your document you switch on a fuzzy search, that contains a lot
+of LiaScript help, examples, and snippets.
+
+![snippets](https://raw.githubusercontent.com/andre-dietrich/liascript-snippets/master/preview.gif)<!-- style="width: 100%" -->
+
+
+
+
+## Ausblick
+
+Die Integration
+
+![Logo](./images/Screenshot.png)<!-- width="80%" -->
+
+Haben wir Sie neugierig gemacht? Weitere Informationen finden Sie unter der Projektwebseite
+
+https://liascript.github.io/
+
+![Logo](./images/logo.png)<!-- width="20%" -->
