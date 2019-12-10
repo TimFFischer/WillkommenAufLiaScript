@@ -321,11 +321,18 @@ Lerninhaltes nicht. Von Haus aus unterstützt Markdown zum Beispiel:
 
 ### Medieneinbindung/ Sprachausgabe
 
+     {{0-3}}
+********************************************************************************
+
+**Text-to-Speach Ausgabe**
+
 Die Sprachausgabe, die *LiaScript* der Ausdrucksmächtigkeit von Markdown
 hinzufügt, haben Sie ja bereits genutzt. Diese kann mit 32 Sprachen umgesetzt
 werden. Klicken Sie nach rechts ...
 
-     {{1}}
+********************************************************************************
+
+     {{1-3}}
 ********************************************************************************
 
 ... um eine englische Textausgabe zu hören. Deren Ausgaben basieren wiederum nur
@@ -350,8 +357,10 @@ Hilfe und den Verweisen in der jeweiligen Sprache.
 
 ********************************************************************************
 
-     {{2}}
+     {{2-3}}
 ********************************************************************************
+
+**Einbettung von Medien**
 
 Darüber hinaus können mit
 
@@ -367,6 +376,42 @@ festlegen. Starten Sie die Einträge über die Bedieninterfaces.
 ?[audio](https://bigsoundbank.com/UPLOAD/mp3/1068.mp3)
 
 !?[video](https://www.youtube.com/watch?v=bICfKRyKTwE)
+
+********************************************************************************
+
+
+                                       {{3-6}}
+********************************************************************************
+
+**Und nun alles zusammen**
+
+In LiaScript können Sie die Videos nachvertonen, in dem Sie Texte zu den Videos abspielen. Schauen wir zunächst auf das Originalvideo des Youtube-Nutzers Björn Seidler, das unter folgendem [Link](https://www.youtube.com/watch?v=qAh6P1MaYtU) zu finden ist. Beim Start des Videos hören Sie den gesprochenen Originalton.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qAh6P1MaYtU?start=15&controls=0&showinfo=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+********************************************************************************
+
+--{{4}}--
+In diesem Video werden wir uns mit den Konzepten des Analog-Digital-Wandlers beschäftigen. Dazu beginnen wir zunächst mit einem Blick ins Handbuch der Atmel 8 Bit-Controller. Sie sehen die Basis Features die ich mit der Maus markiere.
+
+                                       {{4-6}}
+********************************************************************************
+
+Dies ist nun die nachvertonte Version mit Hilfe der LiaScript Sprachausgabe. Der Text liegt als geschriebener Inhalt vor und kann beliebig angepasst werden.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qAh6P1MaYtU?start=15&controls=0&mute=1&showinfo=0&rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+********************************************************************************
+
+--{{5 US English Female}}--
+In this video we focus on the concepts of the analog-to-digital converters. We will start with a look at the Atmel 8 bit controller manual. You see the basic features that I mark with the mouse.
+
+                                       {{5-6}}
+********************************************************************************
+
+So sind auch (maschinelle) Übersetzungen möglich, während das Ursprungsvideomaterial erhalten bleibt.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qAh6P1MaYtU?start=15&controls=0&mute=1&showinfo=0&rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ********************************************************************************
 
