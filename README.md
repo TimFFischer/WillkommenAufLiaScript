@@ -3,7 +3,7 @@ author:   Sebastian Zug
 
 email:    Sebastian.Zug@informatik.tu-freiberg.de
 
-version:  0.0.2
+version:  1.0.2
 
 language: de
 
@@ -18,6 +18,7 @@ link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
+logo:     ./images/logo.png
 
 import: https://raw.githubusercontent.com/LiaTemplates/Rextester/master/README.md
         https://raw.githubusercontent.com/liaTemplates/processingjs/master/README.md
