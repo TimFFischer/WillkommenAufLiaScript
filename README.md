@@ -532,9 +532,9 @@ Weitere Beispiele für Quizze finden Sie unter dem [Link](https://liascript.gith
 
 --{{0}}--
 Ausführbarer Code ist insbesondere für die Ausbildung in der Informatik von
-zentraler Bedeutung. Dabei muss die Intention des Kurses aber auch gar nicht
-auf die Vermittlung von Programmierkenntnissen ausgerichtet sein. Mit dem browserinternen
-Interpreter können alle Arten von Tools, die ein JavaScript Interface bieten, integriert werden. Klicken Sie auf den Button unter den Codefragmenten, um diese auszuführen.
+zentraler Bedeutung. Dies können Programme sein, die eine grafische Ausgabe generieren
+oder aber einen Output auf der Konsole liefern. Mit dem browserinternen
+Interpreter können alle Arten von Tools, die ein JavaScript Interface bieten, integriert werden. Klicken Sie auf den Button unter den Codefragmenten, um diese auszuführen. Ändern Sie den Code, um zum Beispiel die Farbwahl neu zu definieren oder Ausgaben anzupassen.
 
 In diesem Beispiel wurde eine die Processing Toolchain, die als JavaScript-Implementierung vorliegt, in LiaScript integriert. Über ein `include` über dem zugehörigen Makro kann dies eingebettet werden.
 
