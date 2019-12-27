@@ -3,7 +3,7 @@ author:   Sebastian Zug
 
 email:    Sebastian.Zug@informatik.tu-freiberg.de
 
-version:  1.0.2
+version:  1.0.3
 
 language: de
 
@@ -25,7 +25,7 @@ import: https://raw.githubusercontent.com/LiaTemplates/Rextester/master/README.m
 translation: Deutsch  translations/German.md
 -->
 
-# Welcom to LiaScript
+# Welcome to LiaScript
 
     --{{0}}--
 Hello, if you are interested in *Open Educational Resources*, you are you have come to the right place. We want to present you a new concept for the "O" in O E R
