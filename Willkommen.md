@@ -17,6 +17,7 @@ comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
+          https://unpkg.com/x-frame-bypass@1.0.2/x-frame-bypass.js
 
 logo:     ./images/logo.png
 
@@ -29,7 +30,7 @@ translation: Deutsch  translations/German.md
 
 # Willkommen bei LiaScript
 
-    --{{0}}--
+          --{{0}}--
 Hallo, wenn Sie sich für *Open Educational Ressources* interessieren, sind Sie
 hier genau richtig. Wir wollen Ihnen ein neues Konzept für das "O" in O E R
 vorstellen, dass deutlich weitergeht als Dokumente, die auf einem Server online
@@ -75,7 +76,7 @@ zu finden.
 ## Motivation
 
 
-     {{0-1}}
+           {{0-1}}
 ********************************************************************************
 
 <!--
@@ -111,7 +112,7 @@ Version 1.0                           Version 1.1
 ```
 *Versionen der Lehrinhalte eines Kurses und deren Wiederverwendung in anderen Veranstaltungen*
 
-    --{{0}}--
+          --{{0}}--
 Wie sollten Lehrmaterialien entstehen, die den Stempel O E R wirklich verdienen?
 Zum einen sollten sie frei verfügbar sein. Lehrveranstaltungen zu einem Thema
 sind aber sehr unterschiedlich, die Lehrenden setzen variierende Schwerpunkte
@@ -124,13 +125,13 @@ Kurskonfigurationen beziehungsweise Übersetzungen von Inhalten.
 ********************************************************************************
 
 
-     {{1-2}}
+           {{1-2}}
 ********************************************************************************
 
 Warum gelingt es Wikipedia dieses Konzept mit Millionen aktiver Freiwilliger
 erfolgreich umzusetzen.
 
-    --{{1}}--
+          --{{1}}--
 Der Eintrag "Bundesrepublik Deutschland" blickte im Mai 2019 auf 15850
 Änderungen zurück. Dazu haben 3928 Nutzer beigetragen. Wikipedia sichert so die
 Aktualität und Qualität des Bestandes an Daten. Wo aber liegt der Schlüssel zum
@@ -144,12 +145,12 @@ Erfolg?
 
 ********************************************************************************
 
-     {{2-3}}
+           {{2-3}}
 ********************************************************************************
 
 Kann man also einfach ein Wikipedia für Lehrveranstaltungsinhalte ableiten?
 
-    --{{2}}--
+          --{{2}}--
 Kann man also einfach ein Wikipedia für Lehrveranstaltungsinhalte ableiten?
 Diese Frage muss eindeutig mit nein beantwortet werden. Dafür sprechen im
 wesentlichen drei Gründe: erstens, die zentral aufgebaute Architektur von
@@ -216,7 +217,7 @@ implementiert sind, ist dies nicht möglich.
 
 ## LiaScript Konzepte
 
---{{0}}--
+          --{{0}}--
 Folglich möchte *LiaScript* eine Brücke zwischen den Lehr-Lern-Umgebungen,
 dem Wikipedia Ansatz und den Methoden der verteilten Softwareentwicklung schlagen.
 Dafür definiert das Projekt deren Ansätze in folgenden Punkten neu und kombiniert
@@ -230,7 +231,7 @@ sie:
 
 > Damit zielt *LiaScript* auf die Realisierung einer browserbasierten Kursdarstellung, deren Inhalte mit einer Beschreibungssprache spezifiziert werden können. Damit sind interaktive Inhalte ohne explizite Programmierkenntnisse möglich, wobei die konkreten Elemente oder aber ganze Kurse als offene Materialien weiterverarbeitet und modifiziert werden können.
 
-     {{1}}
+            {{1}}
 ********************************************************************************
 
 Die Beiträge von *LiaScript* auf diesem Weg lassen sich wie folgt
@@ -251,9 +252,10 @@ Präsentationsformate Vorlesung, Mitschriften und Buch kennen Sie ja bereits.
 
 ********************************************************************************
 
+
 ## Markdown Erweiterung
 
-    --{{0}}--
+          --{{0}}--
 LiaScript erweitert den Sprachumfang von Markdown in vielerlei Hinsicht. Dies
 sind insbesondere die interaktiven Elemente wie ausführbarer Code oder Quizze.
 Dazu kommen statische Elemente wie Diagramme. Auf den folgenden Seiten finden
@@ -599,6 +601,10 @@ Der folgende Screenshot zeigt die Übersicht über die Versionen seit dem 1. Dez
 
 ![GitHub](./images/ScreenshotGitHub.png)<!-- width="80%" -->
 *Übersicht über den Stand der Versionen am 3.12.2019*
+
+<iframe style="width:100%;height:500px" srcdoc="<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1.0'><style>html,body{margin:0;padding:0;height:100%;overflow:hidden;}iframe{display:block;width:100%;height:100%}</style><script src='https://unpkg.com/@ungap/custom-elements-builtin'></script><script src='https://unpkg.com/x-frame-bypass' type='module'></script></head><body><iframe is='x-frame-bypass' src='https://github.com/SebastianZug/WillkommenAufLiaScript/commits/master'/></body></html>"></iframe>
+
+
 
 Ein öffentliches Git-Projekt kann sehr einfach kopiert und weiterentwickelt werden. Dabei unterstützen entsprechende Tools das Verschmelzen von unterschiedlichen Versionen und Entwicklungssträngen.
 
