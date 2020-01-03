@@ -17,7 +17,6 @@ comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
-          https://unpkg.com/x-frame-bypass@1.0.2/x-frame-bypass.js
 
 logo:     ./images/logo.png
 
