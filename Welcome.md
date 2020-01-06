@@ -31,10 +31,8 @@ translation: Deutsch  translations/German.md
 
     --{{0}}--
 Hello, if you are interested in *Open Educational Resources*, you are have come
-to the right place. We want to present you a new concept for the "O" in O E R
-that goes much further than providing documents on a server. Our project is
-called "LiaScript" and supports the design of teaching material similar to Open
-Source project development. Interested? Then click on the arrow to the right.
+to the right place! We want to present you a new concept for "open" in O E R.
+Our project LiaScript supports the design of teaching material similar to open source software. Interested? Then click on the arrow to the right.
 
 As you can probably already imagine, this course was also developed with
 *LiaScript*. To introduce the concept we use features, provided by browser-based
