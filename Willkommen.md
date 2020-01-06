@@ -599,11 +599,7 @@ aber nur das konventionelle Markdown, so dass einige Elemente in der Vorschau ni
 Der folgende Screenshot zeigt die Übersicht über die Versionen seit dem 1. Dezember. Anhand dieser Übersicht können die Beitragenden und deren Änderungen individuell nachvollzogen werden.
 
 ![GitHub](./images/ScreenshotGitHub.png)<!-- width="80%" -->
-*Übersicht über den Stand der Versionen am 3.12.2019*
-
-<iframe style="width:100%;height:500px" srcdoc="<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1.0'><style>html,body{margin:0;padding:0;height:100%;overflow:hidden;}iframe{display:block;width:100%;height:100%}</style><script src='https://unpkg.com/@ungap/custom-elements-builtin'></script><script src='https://unpkg.com/x-frame-bypass' type='module'></script></head><body><iframe is='x-frame-bypass' src='https://github.com/SebastianZug/WillkommenAufLiaScript/commits/master'/></body></html>"></iframe>
-
-
+*Überblick der Version unter GitHub*
 
 Ein öffentliches Git-Projekt kann sehr einfach kopiert und weiterentwickelt werden. Dabei unterstützen entsprechende Tools das Verschmelzen von unterschiedlichen Versionen und Entwicklungssträngen.
 

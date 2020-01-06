@@ -3,7 +3,7 @@ author:   Sebastian Zug
 
 email:    Sebastian.Zug@informatik.tu-freiberg.de
 
-version:  1.0.3
+version:  1.0.4
 
 language: de
 
@@ -11,7 +11,8 @@ narrator: UK English Female
 
 mode:     Presentation
 
-comment:  This course introduces LiaScript and explains the benefits of the new, open-source concept.
+comment:  This course introduces LiaScript and explains the benefits of the new,
+          open-source concept.
 
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
@@ -615,6 +616,7 @@ With this overview the contributors and their changes can be tracked
 individually.
 
 ![GitHub](./images/ScreenshotGitHub.png)<!-- width="80%" -->
+
 *Overview of the status of the versions on 3.12.2019*
 
 ## Editor
