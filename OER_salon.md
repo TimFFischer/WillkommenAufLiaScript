@@ -29,24 +29,15 @@ translation: Deutsch  translations/German.md
 
 # HDS.Salon
 
-HDS.Salon, 5.11.2020
+<p style="font-size:60px">OER im Kleinen wie im Großen</p>
+
+5.11.2020
 
 Sebastian Zug, TU Bergakademie Freiberg
 
-OER im Kleinen wie im Großen
 
-<H1>
-Here is the source data that is discussed in the article ...
-</H1>
+_Auch dieser Vortrag ist ein Open Source Dokument und unter  zu finden._
 
-
-{{1}}
-+ Welche Annahmen oder Perspektiven schließen OER ein
-+ Wie organsiere ich die Entwicklung meiner Lehr-Lern-Materialien
-+ Wie verändert dies die Sicht der Studierenden auf die Materialien
-
-{{2}}
-Auch dieser Vortrag ist ein Open Source Dokument und unter  zu finden.
 
 ## Motivation
 
@@ -128,6 +119,9 @@ Erfolg?
 | Qualität     | ausgefeilte Reviewsystem mit Experten, Versionsdatenerfassung und -vergleich |                                                              |
 | Sichtbarkeit | Autorenschaft in der Versionshistorie sichtbar              |                                                              |
 
+                  {{1-2}}
+********************************************************************************
+
 **2. (Open-Source-) Softwareprojekte**
 
 Die Softwareentwicklung wird heute über webbasierte Projekttools (GitLab, GitHub) koordiniert.
@@ -139,6 +133,7 @@ Die Softwareentwicklung wird heute über webbasierte Projekttools (GitLab, GitHu
 | Qualität     | technische Unterstützung von Reviews, aufwändige Versionsdatenerfassung und -vergleich, automatisierte Tests |                                                                |
 | Sichtbarkeit | Aufwändige Analysen zu den Beiträgen der Einzelnen             |                                                              |
 
+********************************************************************************
 
 ## Lösungsansatz
 
@@ -159,6 +154,8 @@ Wikipedia --> [Bescheibungssprache     ]
                                                                                .
 ```
 
+       {{1}}
+********************************************************************************
 
 **Tabellen**
 
@@ -179,6 +176,11 @@ Wikipedia --> [Bescheibungssprache     ]
 | Brown bat       |        0.020 |             30 |
 | Sheep           |           90 |             12 |
 | Human           |           68 |             70 |
+
+********************************************************************************
+
+      {{2}}
+********************************************************************************
 
 **Ausführbarer Code**
 
@@ -215,6 +217,11 @@ void draw() {
 ```
 @Processing.eval
 
+********************************************************************************
+
+      {{3}}
+********************************************************************************
+
 **Quizze**
 
 ```markdown
@@ -239,7 +246,9 @@ https://liascript.github.io/
 
 in der [Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1) oder dem [Youtube-Channel](https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg)
 
-## Erfahrungen aus den vergangenen Semestern
+********************************************************************************
+
+## Erfahrungen beim Einsatz von OER
 
 -> Kursüberblick anhand von [GitHub](https://github.com/SebastianZug/VL_Softwareentwicklung)
 
@@ -249,7 +258,6 @@ Ergebnisse:
 2. Fehler werden deutlich schneller ausgemerzt als in vergangenen Jahren. Die "kurzfristige" Qualität steigt an.
 3. Die Interaktion zwischen Lehrenden und Studierenden steigert sich - *"Sollte man das nicht besser so erklären ..."*
 4. Das Verständis über verteilte Entwicklung von Inhalten entwickelt sich sehr positiv, selbst die Nicht-Informatiker beschäftigen sich mit den Methoden.
-
 
 ## Kontakt
 
