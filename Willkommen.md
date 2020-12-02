@@ -511,7 +511,7 @@ In diesem Beispiel wird illustriert, wie zusätzliche Hilfen für den Lernenden
 Integriert werden können. Neben dem "i" für die Lösung taucht nun auch ein Fragezeichen auf.
 
 ``` markdown
-Please mark even numbers!
+Please mark odd numbers!
 
     [[X]] 1
     [[ ]] 2
@@ -523,7 +523,7 @@ Just add as many points as you wish:
     [[X]] 1
     [[ ]] 2
     [[X]] 3
-    [[?]] What is the characteristic of an even number?
+    [[?]] What is the characteristic of an odd number?
 
 Weitere Beispiele für Quizze finden Sie unter dem [Link](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md)
 
